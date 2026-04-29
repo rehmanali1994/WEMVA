@@ -245,7 +245,7 @@ for iteration in range(max_iterations):
     elif which_dataset == 2: # 2 for symmetric aberrator - point targets but no hypoechoic lesions
         plt.savefig('../Figures/Phantom/PhantomVSX2/Recon'+str(iteration)+'.png');  
     elif which_dataset == 3: # 3 for asymmetric aberrator - same as used in TCI paper
-        plt.savefig('../Figures/Phantom/PhantomVSX4_1_TCI/Recon'+str(iteration)+'.png'); 
+        plt.savefig('../Figures/Phantom/PhantomVSX4_1/Recon'+str(iteration)+'.png'); 
     elif which_dataset == 4: # 4 for asymmetric aberrator - slightly different slice from TCI paper
         plt.savefig('../Figures/Phantom/PhantomVSX4_2/Recon'+str(iteration)+'.png');  
     # Stuff to be Recorded
@@ -263,6 +263,6 @@ if which_dataset == 1: # 1 for dataset released in TCI paper
 elif which_dataset == 2: # 2 for symmetric aberrator - point targets but no hypoechoic lesions
     savemat('../Figures/Phantom/PhantomVSX2/FullHistory.mat', data_to_save); 
 elif which_dataset == 3: # 3 for asymmetric aberrator - same as used in TCI paper
-    savemat('../Figures/Phantom/PhantomVSX4_1_TCI/FullHistory.mat', data_to_save); 
+    savemat('../Figures/Phantom/PhantomVSX4_1/FullHistory.mat', data_to_save); 
 elif which_dataset == 4: # 4 for asymmetric aberrator - slightly different slice from TCI paper
     savemat('../Figures/Phantom/PhantomVSX4_2/FullHistory.mat', data_to_save); 
