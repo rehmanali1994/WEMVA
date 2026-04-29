@@ -33,15 +33,41 @@ In our past works, we included [k-Wave](http://www.k-wave.org/) simulated datase
 The JAX/Python script corresponding to these k-Wave datasets is [JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_kWave.py).  Note that [JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_kWave.py) remains compatible with the previously released k-Wave datasets (AbdominalMap3.mat and AbdominalMap4.mat) under [IMPACT/releases](https://github.com/rehmanali1994/IMPACT/releases). 
 
 
-# k-Wave Simulations
+# Code
 
+The key functions/classes used in the waveform inversion scripts ([MultiFrequencyWaveformInvKCI.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvKCI.m); [MultiFrequencyWaveformInvVSX.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvVSX.m); [MultiFrequencyWaveformInvkWave.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvkWave.m)) are: 
+1) [HelmholtzSolver.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/HelmholtzSolver.m) - Implements the Helmholtz equation solver as a class. For a given set of medium properties, the HelmholtzSolver forms the discretized system of equations that needs to be solved either on CPU or GPU. If an NVIDIA GPU is available, a block LU factorization is performed and stored in memory for subsequent solves using this factorization.
+2) [stencilOptParams.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/stencilOptParams.m) - Helper function called by [HelmholtzSolver.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/HelmholtzSolver.m) to generate the stencil used to discretize the Helmholtz equation.
+3) [decompBlockLU.cu](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/decompBlockLU.cu) - This is the MEX CUDA code called by [HelmholtzSolver.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/HelmholtzSolver.m) to perform the block LU factorization. Must be compiled in MATLAB using `mexcuda -lcusolver decompBlockLU.cu` using the cuSOLVER option.
+4) [applyBlockLU.cu](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/applyBlockLU.cu) - This is the MEX CUDA code called by [HelmholtzSolver.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/HelmholtzSolver.m) to apply the block LU factorization computed by [decompBlockLU.cu](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/decompBlockLU.cu) to set of given sources (or adjoint sources). Must be compiled in MATLAB using `mexcuda -lcublas applyBlockLU.cu` using the cuBLAS option.
+5) [ringingRemovalFilt.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Functions/ringingRemovalFilt.m) - Helper function called during waveform inversion scripts ([MultiFrequencyWaveformInvKCI.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvKCI.m); [MultiFrequencyWaveformInvVSX.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvVSX.m); [MultiFrequencyWaveformInvkWave.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvkWave.m)) to remove ringing artifacts in the images.
 
+These codes ran successfully with an NVIDIA GeForce RTX 3060 GPU (12 GB of GPU RAM) on a CPU with 40 GB of RAM in both MATLAB 2021b and 2022b. We therefore recommend running this code on a CPU with at least 32 GB of RAM and a GPU with at least 12 GB of RAM.
 
-The following key MATLAB functions (implemented in Python within [functions.py](https://github.com/rehmanali1994/IMPACT/blob/main/Python/functions.py)) used in these scripts are: 
-1) [line_pixel_intersection.m](https://github.com/rehmanali1994/IMPACT/tree/main/MATLAB/functions/line_pixel_intersection.m) - Computation of path length over each pixel in sound speed map for travel-time tomography
-2) [optApod.m](https://github.com/rehmanali1994/IMPACT/tree/main/MATLAB/functions/optApod.m) - Computes the optimal apodization that maximizes the short-lag spatial coherence. If using this script, please cite the following work:
-> Ali, R.; Duric, N.; Dahl, J. "Optimal Transmit Apodization for the Maximization of Lag-One Coherence with Applications to Aberration Delay Estimation". Ultrasonics. 2023 Apr 23, p.107010.
-3) [propagate.m](https://github.com/rehmanali1994/IMPACT/tree/main/MATLAB/functions/propagate.m) - The Fourier split-step angular spectrum method used in the wavefield correlation technique
-4) [spray.m](https://github.com/rehmanali1994/IMPACT/tree/main/MATLAB/functions/spray.m) - Adjoint of masking operation used to select imaging points in the medium
+# Sample Results
+Each waveform inversion script ([MultiFrequencyWaveformInvkWave.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvkWave.m); [MultiFrequencyWaveformInvKCI.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvKCI.m); [MultiFrequencyWaveformInvVSX.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/MultiFrequencyWaveformInvVSX.m)) saves the results at each iteration to a MAT file in the [Results](https://github.com/rehmanali1994/WaveformInversionUST/tree/main/Results) folder. The results stored in these MAT files can later be visualized using the [viewSavedResults.m](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/viewSavedResults.m)) script. 
 
-Overall, we strongly recommend and prefer the MATLAB code over the Python code because of its faster run times. We also recommend running this code on a system with a large amount of RAM (at least 16 GB, but 32-64 GB is ideal).
+1) BenignCyst.mat:
+
+![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/BenignCyst.gif)
+
+2) Malignancy.mat
+
+![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/Malignancy.gif)
+
+3) VSX_YezitronixPhantom1.mat
+
+![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/VSX_YezitronixPhantom1.gif)
+
+4) VSX_YezitronixPhantom2.mat
+
+![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/VSX_YezitronixPhantom2.gif)
+
+5) kWave_BreastCT.gif
+
+![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/kWave_BreastCT.gif)
+
+6) kWave_BreastMRI.gif
+
+![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/kWave_BreastMRI.gif)
+
