@@ -1,5 +1,5 @@
 # WEMVA
-Wave-Equation Migration Velocity Analysis (WEMVA) for Medical Pulse-Echo Ultrasound Imaging
+JAX Implementation of Wave-Equation Migration Velocity Analysis (WEMVA) for Medical Pulse-Echo Ultrasound Imaging
 
 Wave-equation migration velocity analysis (WEMVA) is a framework for the diffraction tomography of wave-velocity based on imaged reflections.  WEMVA originated in seismic imaging, where it was used to reconstruct the wave velocity profile that optimally focuses the imaged reflectors via reverse-time migration (RTM).  This can roughly be understood as a type of full-waveform inversion (FWI) that acts in the image domain to minimize the misalignment in the imaged reflectors as a function of the reflection angle.  We present two forms of WEMVA (one based on inter-transmit differences; the other based on subsurface offset).  This work uses WEMVA to perform sound speed estimation and aberration correction in medical ultrasound imaging based on a multistatic synthetic aperture setup.
 
@@ -13,14 +13,18 @@ If you use the algorithms and/or datasets provided in this repository for your o
 
 You can reference a static version of this code by its DOI number: ADD ZENODO DOI HERE
 
-# Code and Sample Datasets
+# Experimental Datasets
 
 **Please download the sample data (SuperficialAbdominalLayersL7-4.mat; Rat10_Acq3.mat; Rat11_Acq2.mat; PhantomVSX2.mat; PhantomVSX4_1.mat; PhantomVSX4_2.mat) under the [WEMVA/releases](https://github.com/rehmanali1994/WEMVA/releases) tab for this repository, and place that data in the [Datasets](https://github.com/rehmanali1994/IMPACT/tree/main/Datasets/) folder.  Additionally, this repository uses sample data (RatAbdomenL12-3v.mat; PhantomL12-5-50mm.mat) previously released under [IMPACT/releases](https://github.com/rehmanali1994/IMPACT/releases) tab, which should also be placed in the [Datasets](https://github.com/rehmanali1994/IMPACT/tree/main/Datasets/) folder.**
 
 The following scripts correspond to each dataset:
-1) AbdominalMap3.mat and AbdominalMap4.mat - [AberrationTomographyShotGatherMigKWave.m](https://github.com/rehmanali1994/IMPACT/blob/main/MATLAB/AberrationTomographyShotGatherMigKWave.m)) and [AberrationTomographyShotGatherMigKWave.py](https://github.com/rehmanali1994/IMPACT/blob/main/Python/AberrationTomographyShotGatherMigKWave.py)) - These datasets were simulated in k-Wave with a known ground-truth sound speed profile.
-2) RatAbdomenL12-3v.mat - [AberrationTomographyShotGatherMigL12_3v.m](https://github.com/rehmanali1994/IMPACT/blob/main/MATLAB/AberrationTomographyShotGatherMigL12_3v.m)) and [AberrationTomographyShotGatherMigL12_3v.py](https://github.com/rehmanali1994/IMPACT/blob/main/Python/AberrationTomographyShotGatherMigL12_3v.py)) - This dataset was obtained from the abdomen of an obese Zucker rat under a Stanford-approved IACUC protocol using an L12-3v probe.
-3) PhantomL12-5-50mm.mat - [AberrationTomographyShotGatherMigL12_5_50mm.m](https://github.com/rehmanali1994/IMPACT/blob/main/MATLAB/AberrationTomographyShotGatherMigL12_5_50mm.m)) and [AberrationTomographyShotGatherMigL12_5_50mm.py](https://github.com/rehmanali1994/IMPACT/blob/main/Python/AberrationTomographyShotGatherMigL12_5_50mm.py)) - This dataset was obtained using an L12-5 50mm probe from a phantom with three high sound speed alcohol inclusions to induce aberrations in the image.
+1) SuperficialAbdominalLayersL7-4.mat - [WEMVA_FMC_L7_4.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L7_4.py) - This dataset was acquired from the abdomen of a healthy human volunteer under a University of Rochester RSRB-approved protocol using an L7-4 probe.
+2) RatAbdomenL12-3v.mat; Rat10_Acq3.mat; Rat11_Acq2.mat - [WEMVA_FMC_L12_3v.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L12_3v.py) - These datasets were obtained from the abdomen of obese Zucker rats under a Stanford-approved IACUC protocol using an L12-3v probe.
+3) PhantomL12-5-50mm.mat; PhantomVSX2.mat; PhantomVSX4_1.mat; PhantomVSX4_2.mat - [WEMVA_FMC_L12_5_50mm.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L12_5_50mm.py) - These datasets was obtained using an L12-5 50mm probe from phantoms with high sound speed alcohol inclusions to induce aberrations in the image.
+
+# k-Wave Simulations
+
+
 
 The following key MATLAB functions (implemented in Python within [functions.py](https://github.com/rehmanali1994/IMPACT/blob/main/Python/functions.py)) used in these scripts are: 
 1) [line_pixel_intersection.m](https://github.com/rehmanali1994/IMPACT/tree/main/MATLAB/functions/line_pixel_intersection.m) - Computation of path length over each pixel in sound speed map for travel-time tomography
