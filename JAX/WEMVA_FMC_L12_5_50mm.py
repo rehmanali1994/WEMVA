@@ -56,11 +56,11 @@ rng_min = 1350; rng_max = 1650; # Sound Speed Display Range [m/s]
 if which_dataset == 1: # 1 for dataset released in TCI paper
     load_filename = '../Datasets/PhantomL12-5-50mm.mat'; 
 elif which_dataset == 2: # 2 for symmetric aberrator - point targets but no hypoechoic lesions
-    load_filename = '../Datasets/phantomPointTargetsDatasetVSX2.mat'; 
+    load_filename = '../Datasets/PhantomVSX2.mat'; 
 elif which_dataset == 3: # 3 for asymmetric aberrator - same as used in TCI paper
-    load_filename = '../Datasets/phantomPointTargetsDatasetVSX4_1.mat'; 
+    load_filename = '../Datasets/PhantomVSX4_1.mat'; 
 elif which_dataset == 4: # 4 for asymmetric aberrator - slightly different slice from TCI paper
-    load_filename = '../Datasets/phantomPointTargetsDatasetVSX4_2.mat'; 
+    load_filename = '../Datasets/PhantomVSX4_2.mat'; 
 dataset = loadmat_hdf5(load_filename); 
 rxAptPos = dataset['rxAptPos']
 time = dataset['time'][0]
