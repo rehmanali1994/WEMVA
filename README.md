@@ -15,7 +15,7 @@ You can reference a static version of this code by its DOI number: ADD ZENODO DO
 
 # Code and Sample Datasets
 
-**Please download the sample data (SuperficialAbdominalLayersL7-4.mat; Rat10_Acq3.mat; Rat11_Acq2.mat; PhantomVSX2.mat; PhantomVSX4_1.mat; PhantomVSX4_2.mat) under the [releases](https://github.com/rehmanali1994/IMPACT/releases) tab for this repository, and place that data in the [Datasets](https://github.com/rehmanali1994/IMPACT/tree/main/Datasets/) folder.**
+**Please download the sample data (SuperficialAbdominalLayersL7-4.mat; Rat10_Acq3.mat; Rat11_Acq2.mat; PhantomVSX2.mat; PhantomVSX4_1.mat; PhantomVSX4_2.mat) under the [WEMVA/releases](https://github.com/rehmanali1994/WEMVA/releases) tab for this repository, and place that data in the [Datasets](https://github.com/rehmanali1994/IMPACT/tree/main/Datasets/) folder.  Additionally, this repository uses sample data (RatAbdomenL12-3v.mat; PhantomL12-5-50mm.mat) previously released under [IMPACT/releases](https://github.com/rehmanali1994/IMPACT/releases) tab, which should also be placed in the [Datasets](https://github.com/rehmanali1994/IMPACT/tree/main/Datasets/) folder.**
 
 The following scripts correspond to each dataset:
 1) AbdominalMap3.mat and AbdominalMap4.mat - [AberrationTomographyShotGatherMigKWave.m](https://github.com/rehmanali1994/IMPACT/blob/main/MATLAB/AberrationTomographyShotGatherMigKWave.m)) and [AberrationTomographyShotGatherMigKWave.py](https://github.com/rehmanali1994/IMPACT/blob/main/Python/AberrationTomographyShotGatherMigKWave.py)) - These datasets were simulated in k-Wave with a known ground-truth sound speed profile.
