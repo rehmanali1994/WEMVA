@@ -5,7 +5,7 @@ Wave-equation migration velocity analysis (WEMVA) is an image-domain diffraction
 
 This work builds on the prior [IMPACT](https://github.com/rehmanali1994/IMPACT) method, which estimates sound speed from aberration delays between single-element transmit images using ray tomography. WEMVA instead relies on a direct adjoint-state diffraction tomography directly through the RTM operator, without measuring intermediate delays. 
 
-Recovering sound speed from limited-angle pulse-echo ultrasound data is a challenging inverse problem with major importance for medical ultrasound imaging. This open-source project aims to provide a transparent implementation of WEMVA so researchers can reproduce, understand, and extend these methods. The included datasets and algorithms were used in the following work:
+Recovering sound speed from limited-angle pulse-echo ultrasound data is a challenging inverse problem with major diagnostic relevance. This open-source project aims to provide a transparent implementation of WEMVA so researchers can reproduce, understand, and extend these methods. The included datasets and algorithms were used in the following work:
 
 > Ali, R.; Mitcham, T.; Doyley, M.; Duric, N.; Dahl, J.  "Wave-Equation Migration Velocity Analysis for Multistatic Synthetic Aperture Ultrasound". IEEE Transactions on Ultrasonics. IN REVIEW.
 
