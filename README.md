@@ -59,23 +59,15 @@ Each WEMVA scripts ([JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WE
 6) `AbdominalMap6.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map6/Map6.gif)
 
-3) Malignancy.mat
+## Phantom Datasets:
 
-![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/Malignancy.gif)
+1) PhantomL12-5-50mm.mat 
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomL12-5-50mm/PhantomL12-5-50mm.gif)
+2) PhantomVSX2.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX2/PhantomVSX2.gif)
+3) PhantomVSX4_1.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_1/PhantomVSX4_1.gif)
+4) PhantomVSX4_2.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_2/PhantomVSX4_2.gif)
 
-3) VSX_YezitronixPhantom1.mat
-
-![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/VSX_YezitronixPhantom1.gif)
-
-4) VSX_YezitronixPhantom2.mat
-
-![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/VSX_YezitronixPhantom2.gif)
-
-5) kWave_BreastCT.gif
-
-![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/kWave_BreastCT.gif)
-
-6) kWave_BreastMRI.gif
-
-![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/kWave_BreastMRI.gif)
 
