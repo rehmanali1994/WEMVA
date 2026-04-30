@@ -3,7 +3,7 @@ JAX Implementation of Wave-Equation Migration Velocity Analysis (WEMVA) for Medi
 
 Originally developed for seismic imaging, wave-equation migration velocity analysis (WEMVA) estimates wave velocity by improving the focusing of imaged reflectors in reverse-time migration (RTM). WEMVA is a form of diffraction tomography, similar to full-waveform inversion, that minimizes misalignment across reflection angles. We adapt WEMVA for sound-speed estimation and aberration correction in multistatic synthetic aperture ultrasound using two approaches: one based on mimimizing inter-transmit differences and another based on driving the extended RTM to zero subsurface offset.
 
-Recovering sound speed from limited-angle pulse-echo ultrasound data is a challenging inverse problem with major diagnostic relevance. This open-source project aims to provide a transparent implementation of WEMVA so researchers can reproduce, understand, and extend these methods. The included datasets and algorithms were used in the following work:
+Recovering sound speed from limited-angle pulse-echo ultrasound data is a challenging nonlinear inverse problem of clinical and diagnostic relevance. This open-source project aims to provide a transparent implementation of WEMVA so researchers can reproduce, understand, and extend these methods. The included datasets and algorithms were used in the following work:
 
 > Ali, R.; Mitcham, T.; Doyley, M.; Duric, N.; Dahl, J.  "Wave-Equation Migration Velocity Analysis for Multistatic Synthetic Aperture Ultrasound". IEEE Transactions on Ultrasonics. IN REVIEW.
 
