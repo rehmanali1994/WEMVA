@@ -50,35 +50,35 @@ Each WEMVA scripts ([JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WE
 
 ## Rat Datasets:
 
-1) Rat10_Acq3.mat 
+### `Rat10_Acq3.mat`
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat10_Acq3/Rat10_Acq3.gif)
-2) Rat11_Acq2.mat
+### `Rat11_Acq2.mat`
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat11_Acq2/Rat11_Acq2.gif)
-3) RatAbdomenL12-3v.mat
+### `RatAbdomenL12-3v.mat`
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/RatAbdomenL12-3v/RatAbdomenL12-3v.gif)
 
 ## Phantom Datasets:
 
-1) PhantomL12-5-50mm.mat 
+### `PhantomL12-5-50mm.mat`
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomL12-5-50mm/PhantomL12-5-50mm.gif)
-2) PhantomVSX2.mat
+### `PhantomVSX2.mat`
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX2/PhantomVSX2.gif)
-3) PhantomVSX4_1.mat
+### `PhantomVSX4_1.mat`
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_1/PhantomVSX4_1.gif)
-4) PhantomVSX4_2.mat
+### `PhantomVSX4_2.mat`
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_2/PhantomVSX4_2.gif)
 
 ## `AbdominalMap(1|2|3|4|5|6).mat`:
 
-1) `AbdominalMap1.mat`:
+### `AbdominalMap1.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map1/Map1.gif)
-2) `AbdominalMap2.mat`:
+### `AbdominalMap2.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map2/Map2.gif)
-3) `AbdominalMap3.mat`:
+### `AbdominalMap3.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map3/Map3.gif)
-4) `AbdominalMap4.mat`:
+### `AbdominalMap4.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map4/Map4.gif)
-5) `AbdominalMap5.mat`:
+### `AbdominalMap5.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map5/Map5.gif)
-6) `AbdominalMap6.mat`:
+### `AbdominalMap6.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map6/Map6.gif)
