@@ -24,7 +24,7 @@ blur_z_FWHM_wvlens = 8; # blurring length over z [in wavelengths]
 blur_x_FWHM_wvlens = 8; # blurring length over x [in wavelengths]
 layerPrior = 0.999; # Ranging from 0 (no prior) to 1 (fully layered)
 # Parameters for Distortion Matrix / Subsurface-Offset Extended RTM Approach
-useDistortionMatrixMethod = False; # Use Distortion Matrix Method (True); Use Image Differences (False)
+useDistortionMatrixMethod = True; # Use Distortion Matrix Method (True); Use Image Differences (False)
 if useDistortionMatrixMethod:
     roundoff_scaling = 1e-8; # Scaling Residuals to Avoid Over/Underflow Errors (e.g., Step Size Formula) 
 else:
