@@ -44,6 +44,30 @@ REVISE THIS.  These codes ran successfully with an NVIDIA RTX PRO 6000 GPU (96 G
 # Sample Results
 Each WEMVA scripts ([JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_kWave.py); [JAX/WEMVA_FMC_L12_5_50mm.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L12_5_50mm.py); [JAX/WEMVA_FMC_L12_3v.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L12_3v.py); [JAX/WEMVA_FMC_L7_4.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L7_4.py)) saves the results at each iteration to individual `.png` files and all iterations to a single  `FullHistory.mat` file in a corresponding subdirectory of the [Figures](https://github.com/rehmanali1994/WEMVA/tree/main/Figures) folder. The results stored in each `FullHistory.mat` file can later be visualized using MATLAB. The following GIFs of the results were generated using the `.png` files for the subsurface-offset variant of WEMVA.
 
+## `SuperficialAbdominalLayersL7-4.mat`:
+
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/SuperficialLayers/SuperficialLayers.gif)
+
+## Rat Datasets:
+
+1) Rat10_Acq3.mat 
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat10_Acq3/Rat10_Acq3.gif)
+2) Rat11_Acq2.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat11_Acq2/Rat11_Acq2.gif)
+3) RatAbdomenL12-3v.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/RatAbdomenL12-3v/RatAbdomenL12-3v.gif)
+
+## Phantom Datasets:
+
+1) PhantomL12-5-50mm.mat 
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomL12-5-50mm/PhantomL12-5-50mm.gif)
+2) PhantomVSX2.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX2/PhantomVSX2.gif)
+3) PhantomVSX4_1.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_1/PhantomVSX4_1.gif)
+4) PhantomVSX4_2.mat
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_2/PhantomVSX4_2.gif)
+
 ## `AbdominalMap(1|2|3|4|5|6).mat`:
 
 1) `AbdominalMap1.mat`:
@@ -58,27 +82,3 @@ Each WEMVA scripts ([JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WE
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map5/Map5.gif)
 6) `AbdominalMap6.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map6/Map6.gif)
-
-## Phantom Datasets:
-
-1) PhantomL12-5-50mm.mat 
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomL12-5-50mm/PhantomL12-5-50mm.gif)
-2) PhantomVSX2.mat
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX2/PhantomVSX2.gif)
-3) PhantomVSX4_1.mat
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_1/PhantomVSX4_1.gif)
-4) PhantomVSX4_2.mat
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/PhantomVSX4_2/PhantomVSX4_2.gif)
-
-## Rat Datasets:
-
-1) Rat10_Acq3.mat 
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat10_Acq3/Rat10_Acq3.gif)
-2) Rat11_Acq2.mat
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat11_Acq2/Rat11_Acq2.gif)
-3) RatAbdomenL12-3v.mat
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/RatAbdomenL12-3v/RatAbdomenL12-3v.gif)
-
-## `SuperficialAbdominalLayersL7-4.mat`:
-
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/SuperficialLayers/SuperficialLayers.gif)
