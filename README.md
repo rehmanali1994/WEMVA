@@ -11,7 +11,7 @@ Recovering sound speed from limited-angle pulse-echo ultrasound data is a challe
 
 If you use the algorithms and/or datasets provided in this repository for your own research work, please cite the above paper.
 
-You can reference a static version of this code by its DOI number: ADD ZENODO DOI HERE
+You can reference a static version of this code by its DOI number: [![DOI](https://zenodo.org/badge/1224779196.svg)](https://doi.org/10.5281/zenodo.19906865)
 
 # Experimental Datasets
 
