@@ -44,16 +44,22 @@ REVISE THIS.  These codes ran successfully with an NVIDIA RTX PRO 6000 GPU (96 G
 # Sample Results
 Each WEMVA scripts ([JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_kWave.py); [JAX/WEMVA_FMC_L12_5_50mm.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L12_5_50mm.py); [JAX/WEMVA_FMC_L12_3v.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L12_3v.py); [JAX/WEMVA_FMC_L7_4.py](https://github.com/rehmanali1994/WEMVA/blob/main/JAX/WEMVA_FMC_L7_4.py)) saves the results at each iteration to individual `.png` files and all iterations to a single  `FullHistory.mat` file in a corresponding subdirectory of the [Figures](https://github.com/rehmanali1994/WEMVA/tree/main/Figures) folder. The results stored in each `FullHistory.mat` file can later be visualized using MATLAB. The following GIFs of the results were generated using the `.png` files for the subsurface-offset variant of WEMVA.
 
-1) `AbdominalMap(1|2|3|4|5|6).mat`:
+## `AbdominalMap(1|2|3|4|5|6).mat`:
 
+1) `AbdominalMap1.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map1/Map1.gif)
+2) `AbdominalMap2.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map2/Map2.gif)
+3) `AbdominalMap3.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map3/Map3.gif)
+4) `AbdominalMap4.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map4/Map4.gif)
+5) `AbdominalMap5.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map5/Map5.gif)
+6) `AbdominalMap6.mat`:
 ![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/AbdominalMaps/Map6/Map6.gif)
 
-2) Malignancy.mat
+3) Malignancy.mat
 
 ![](https://github.com/rehmanali1994/WaveformInversionUST/blob/main/Results/Malignancy.gif)
 
