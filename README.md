@@ -73,11 +73,11 @@ Each WEMVA scripts ([JAX/WEMVA_FMC_kWave.py](https://github.com/rehmanali1994/WE
 ## Rat Datasets:
 
 1) Rat10_Acq3.mat 
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/Rat10_Acq3/Rat10_Acq3.gif)
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat10_Acq3/Rat10_Acq3.gif)
 2) Rat11_Acq2.mat
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/Rat11_Acq2/Rat11_Acq2.gif)
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/Rat11_Acq2/Rat11_Acq2.gif)
 3) RatAbdomenL12-3v.mat
-![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/Phantom/RatAbdomenL12-3v/RatAbdomenL12-3v.gif)
+![](https://github.com/rehmanali1994/WEMVA/blob/main/Figures/RatAbdomen/RatAbdomenL12-3v/RatAbdomenL12-3v.gif)
 
 ## `SuperficialAbdominalLayersL7-4.mat`:
 
