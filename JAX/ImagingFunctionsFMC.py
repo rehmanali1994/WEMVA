@@ -7,7 +7,7 @@ import jax.numpy as jnp
 
 # COMPLETE LIST OF HARD-CODED VALUES HERE
 BATCH_SIZE = 16; # V2: Checkpoint 1 out of every BATCH_SIZE sample in depth (reverse-mode AD over batches in depth)
-NUM_FREQ_CHUNKS = 8; # V3: Setting this equal to 1 is like using the V2 function without chunking over frequencies
+NUM_FREQ_CHUNKS = 4; # V3: Setting this equal to 1 is like using the V2 function without chunking over frequencies
 # ANY PARAMETER IN V2 AFFECTS V3 BECAUSE V3 BUILDS ON V2
 
 # Autodiff-Friendly Version of Absolute Value-Squared (jnp.abs(z)**2)
