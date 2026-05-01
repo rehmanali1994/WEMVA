@@ -5,7 +5,17 @@ Originally developed for seismic imaging, wave-equation migration velocity analy
 
 Recovering sound speed from limited-angle pulse-echo ultrasound data is a challenging nonlinear inverse problem of clinical and diagnostic relevance. This open-source project aims to provide a transparent implementation of WEMVA so researchers can reproduce, understand, and extend these methods. The included datasets and algorithms were used in the following work:
 
-> Ali, R.; Mitcham, T.; Doyley, M.; Duric, N.; Dahl, J.  "Wave-Equation Migration Velocity Analysis for Multistatic Synthetic Aperture Ultrasound". IEEE Transactions on Ultrasonics. IN REVIEW.
+```BibTeX
+@misc{ali2026waveequationmigrationvelocityanalysis,
+      title={Wave-Equation Migration Velocity Analysis for Multistatic Synthetic Aperture Ultrasound}, 
+      author={Rehman Ali and Trevor M. Mitcham and Marvin M. Doyley and Nebojsa Duric and Jeremy J. Dahl},
+      year={2026},
+      eprint={2604.27428},
+      archivePrefix={arXiv},
+      primaryClass={physics.med-ph},
+      url={https://arxiv.org/abs/2604.27428}, 
+}
+```
 
 If you use the algorithms and/or datasets provided in this repository for your own research work, please cite the above paper.
 
